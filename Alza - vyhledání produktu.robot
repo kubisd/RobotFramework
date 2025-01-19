@@ -20,7 +20,7 @@ Nákup produktu
     Click Element    css:[data-action-type-value="13"]
     Input Text    css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]    ${Produkt}
     Press Keys    css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]    ENTER
-    Sleep    2s
+    Sleep    1s
     Scroll Element Into View    id=img7742430
     Click Element    id=img7742430
 
@@ -49,11 +49,11 @@ Nákup produktu
         ${IS_PRESENT}=    Run Keyword And Return Status    Current Frame Should Contain    Herní konzole Valve Steam Deck OLED Console 512GB
         IF     '$IS_PRESENT='
             Click Element    xpath=//a[@data-testid='headerBasketIcon']
-            Sleep    2s
+            Sleep    1s
             Click Element    xpath=//div[@class="countMinus"]
             Sleep    1s
             Click Element    xpath=//span[@class="btnx normal green ok" and text()="Odebrat zboží"]
-            Sleep    2s
+            Sleep    1s
             Click Element    xpath=//a[@data-testid='headerLogo']
         ELSE
            Go Back
