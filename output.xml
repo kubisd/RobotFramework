@@ -1,278 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.12.6 on win32)" generated="2025-01-19T14:26:59.940025" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.12.6 on win32)" generated="2025-01-19T18:31:50.837828" rpa="false" schemaversion="5">
 <suite id="s1" name="PythonProject" source="C:\Users\kubis\PycharmProjects\PythonProject">
-<suite id="s1-s1" name="Alza - vyhledání produktu" source="C:\Users\kubis\PycharmProjects\PythonProject\Alza - vyhledání produktu.robot">
-<test id="s1-s1-t1" name="Nákup produktu" line="22">
+<suite id="s1-s1" name="Alza vyhledání produktu" source="C:\Users\kubis\PycharmProjects\PythonProject\Alza_vyhledání_produktu.robot">
+<test id="s1-s1-t1" name="Nákup produktu" line="24">
 <kw name="Setting up a browser" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:00.196553" level="INFO">Opening browser 'chrome' to base url 'https://alza.cz'.</msg>
+<msg time="2025-01-19T18:31:51.027668" level="INFO">Opening browser 'chrome' to base url 'https://alza.cz'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-19T14:27:00.196553" elapsed="3.677654"/>
+<status status="PASS" start="2025-01-19T18:31:51.027668" elapsed="3.745673"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-19T14:27:03.874207" elapsed="0.050580"/>
+<status status="PASS" start="2025-01-19T18:31:54.773341" elapsed="0.043328"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Alza.cz</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-19T14:27:03.924787" elapsed="0.054115"/>
+<status status="PASS" start="2025-01-19T18:31:54.816669" elapsed="0.049698"/>
 </kw>
-<status status="PASS" start="2025-01-19T14:27:00.195049" elapsed="3.784852"/>
+<status status="PASS" start="2025-01-19T18:31:51.026644" elapsed="3.839723"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:03.981409" level="INFO">Clicking element 'css:[data-action-type-value="13"]'.</msg>
+<msg time="2025-01-19T18:31:54.867366" level="INFO">Clicking element 'css:[data-action-type-value="13"]'.</msg>
 <arg>css:[data-action-type-value="13"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:27:03.979901" elapsed="0.201172"/>
+<status status="PASS" start="2025-01-19T18:31:54.867366" elapsed="0.167749"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:04.182853" level="INFO">Typing text 'Steam Deck' into text field 'css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]'.</msg>
+<msg time="2025-01-19T18:31:55.036119" level="INFO">Typing text 'Steam Deck' into text field 'css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]'.</msg>
 <arg>css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]</arg>
 <arg>${Product}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:27:04.182853" elapsed="0.120834"/>
+<status status="PASS" start="2025-01-19T18:31:55.036119" elapsed="0.139861"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:04.304691" level="INFO">Sending key(s) ('ENTER',) to css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."] element.</msg>
-<msg time="2025-01-19T14:27:04.586665" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2025-01-19T14:27:04.586665" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2025-01-19T18:31:55.176978" level="INFO">Sending key(s) ('ENTER',) to css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."] element.</msg>
+<msg time="2025-01-19T18:31:55.454637" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-01-19T18:31:55.455669" level="INFO">Releasing special key ENTER.</msg>
 <arg>css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-01-19T14:27:04.303687" elapsed="0.287482"/>
+<status status="PASS" start="2025-01-19T18:31:55.176978" elapsed="0.282658"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-19T14:27:05.591571" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-19T14:27:04.591169" elapsed="1.000402"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Vyhledáno: ${Product}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-19T18:31:55.459636" elapsed="1.524761"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>id=img7742430</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-01-19T14:27:05.591571" elapsed="0.277218"/>
+<status status="PASS" start="2025-01-19T18:31:56.984397" elapsed="0.309948"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:05.868789" level="INFO">Clicking element 'id=img7742430'.</msg>
+<msg time="2025-01-19T18:31:57.295366" level="INFO">Clicking element 'id=img7742430'.</msg>
 <arg>id=img7742430</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:27:05.868789" elapsed="1.367551"/>
+<status status="PASS" start="2025-01-19T18:31:57.294345" elapsed="2.155776"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Valve Steam Deck Console 256GB</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-19T14:27:07.236340" elapsed="0.032767"/>
+<status status="PASS" start="2025-01-19T18:31:59.451123" elapsed="0.032054"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:07.589481" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-01-19T14:27:07.589481" level="FAIL">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' should have contained text 'Skladem' but its text was 'Momentálně nedostupné'.</msg>
+<msg time="2025-01-19T18:31:59.794544" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-19T18:31:59.794544" level="FAIL">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' should have contained text 'Skladem' but its text was 'Momentálně nedostupné'.</msg>
 <arg>${Available}</arg>
 <arg>Skladem</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="FAIL" start="2025-01-19T14:27:07.270137" elapsed="0.324406">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' should have contained text 'Skladem' but its text was 'Momentálně nedostupné'.</status>
+<status status="FAIL" start="2025-01-19T18:31:59.484186" elapsed="0.312870">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' should have contained text 'Skladem' but its text was 'Momentálně nedostupné'.</status>
 </kw>
-<msg time="2025-01-19T14:27:07.594543" level="INFO">${IS_PRESENT1} = False</msg>
+<msg time="2025-01-19T18:31:59.797056" level="INFO">${IS_PRESENT1} = False</msg>
 <var>${IS_PRESENT1}</var>
 <arg>Element Should Contain</arg>
 <arg>${Available}</arg>
 <arg>Skladem</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-01-19T14:27:07.270137" elapsed="0.324406"/>
+<status status="PASS" start="2025-01-19T18:31:59.483177" elapsed="0.313879"/>
 </kw>
 <if>
 <branch type="IF" condition="${IS_PRESENT1}">
 <kw name="Log" owner="BuiltIn">
 <arg>Produkt je skladem</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:07.596052" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-19T18:31:59.798054" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${Add_basket}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:07.596052" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-19T18:31:59.798054" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-01-19T14:27:07.596052" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-19T18:31:59.797056" elapsed="0.000998"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-19T14:27:07.597087" level="INFO">Produkt není skladem</msg>
+<msg time="2025-01-19T18:31:59.798054" level="INFO">Produkt není skladem</msg>
 <arg>Produkt není skladem</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-19T14:27:07.597087" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:31:59.798054" elapsed="0.000000"/>
 </kw>
 <kw name="Go Back" owner="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2025-01-19T14:27:07.597087" elapsed="0.447489"/>
+<status status="PASS" start="2025-01-19T18:31:59.798054" elapsed="0.050889"/>
 </kw>
-<status status="PASS" start="2025-01-19T14:27:07.597087" elapsed="0.447489"/>
+<status status="PASS" start="2025-01-19T18:31:59.798054" elapsed="0.050889"/>
 </branch>
-<status status="PASS" start="2025-01-19T14:27:07.596052" elapsed="0.448524"/>
+<status status="PASS" start="2025-01-19T18:31:59.797056" elapsed="0.051887"/>
 </if>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>id=img8070872</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-01-19T14:27:08.044576" elapsed="0.400446"/>
+<status status="PASS" start="2025-01-19T18:31:59.849941" elapsed="0.280229"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:08.446024" level="INFO">Clicking element 'id=img8070872'.</msg>
+<msg time="2025-01-19T18:32:00.131169" level="INFO">Clicking element 'id=img8070872'.</msg>
 <arg>id=img8070872</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:27:08.445022" elapsed="0.670057"/>
+<status status="PASS" start="2025-01-19T18:32:00.131169" elapsed="0.720637"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Valve Steam Deck OLED Console 512GB</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-19T14:27:09.116079" elapsed="0.024129"/>
+<status status="PASS" start="2025-01-19T18:32:00.853311" elapsed="0.030105"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:09.421484" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-01-19T14:27:09.421484" level="FAIL">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' should have contained text 'Skladem' but its text was 'Na objednávku – termín upřesníme 1 ks'.</msg>
+<msg time="2025-01-19T18:32:00.895005" level="INFO">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' contains text 'Skladem'.</msg>
 <arg>${Available}</arg>
 <arg>Skladem</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="FAIL" start="2025-01-19T14:27:09.141230" elapsed="0.280254">Element 'xpath=//span[@class="AlzaText availability-alz-50 availability-alz-59 availability-alz-22 availability-alz-61"]' should have contained text 'Skladem' but its text was 'Na objednávku – termín upřesníme 1 ks'.</status>
+<status status="PASS" start="2025-01-19T18:32:00.884452" elapsed="0.010553"/>
 </kw>
-<msg time="2025-01-19T14:27:09.421484" level="INFO">${IS_PRESENT2} = False</msg>
+<msg time="2025-01-19T18:32:00.895005" level="INFO">${IS_PRESENT2} = True</msg>
 <var>${IS_PRESENT2}</var>
 <arg>Element Should Contain</arg>
 <arg>${Available}</arg>
 <arg>Skladem</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-01-19T14:27:09.141230" elapsed="0.280254"/>
+<status status="PASS" start="2025-01-19T18:32:00.884452" elapsed="0.010553"/>
 </kw>
 <if>
 <branch type="IF" condition="${IS_PRESENT2}">
 <kw name="Log" owner="BuiltIn">
+<msg time="2025-01-19T18:32:00.896006" level="INFO">Produkt je skladem</msg>
 <arg>Produkt je skladem</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:00.896006" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:00.896006" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Do košíku')]'.</msg>
 <arg>${Add_basket}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:00.896006" elapsed="0.601944"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:01.498950" level="INFO">Clicking element 'xpath=//span[contains(text(), 'Pokračovat do košíku')]'.</msg>
 <arg>xpath=//span[contains(text(), 'Pokračovat do košíku')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:01.498950" elapsed="0.669434"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:02.169395" level="INFO">Clicking element 'xpath=//a[@data-testid='headerLogo']'.</msg>
 <arg>${Homepage}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:02.168384" elapsed="0.958233"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:03.127616" level="INFO">Simulating Mouse Over on element 'xpath=//a[@data-testid='headerBasketIcon']'.</msg>
 <arg>${Show_basket}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:03.127616" elapsed="0.594268"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Current Frame Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:03.742340" level="INFO">Current frame contains text 'Herní konzole Valve Steam Deck OLED Console 512GB'.</msg>
+<arg>Herní konzole Valve Steam Deck OLED Console 512GB</arg>
+<doc>Verifies that the current frame contains ``text``.</doc>
+<status status="PASS" start="2025-01-19T18:32:03.721884" elapsed="0.020456"/>
+</kw>
+<msg time="2025-01-19T18:32:03.743340" level="INFO">${IS_PRESENT3} = True</msg>
 <var>${IS_PRESENT3}</var>
 <arg>Current Frame Should Contain</arg>
 <arg>Herní konzole Valve Steam Deck OLED Console 512GB</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:03.721884" elapsed="0.021456"/>
 </kw>
 <if>
 <branch type="IF" condition="'$IS_PRESENT3='">
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:03.743340" level="INFO">Clicking element 'xpath=//a[@data-testid='headerBasketIcon']'.</msg>
 <arg>${Show_basket}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:03.743340" elapsed="0.462702"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:04.206042" level="INFO">Clicking element 'xpath=//div[@class="countMinus"]'.</msg>
 <arg>xpath=//div[@class="countMinus"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:04.206042" elapsed="0.137407"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T18:32:05.344364" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:04.343992" elapsed="1.000372"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:05.344364" level="INFO">Clicking element 'xpath=//span[@class="btnx normal green ok" and text()="Odebrat zboží"]'.</msg>
 <arg>xpath=//span[@class="btnx normal green ok" and text()="Odebrat zboží"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.423175" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:05.344364" elapsed="0.072255"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T18:32:06.417077" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.423175" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:05.416619" elapsed="1.000458"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:06.417588" level="INFO">Clicking element 'xpath=//a[@data-testid='headerLogo']'.</msg>
 <arg>${Homepage}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.423175" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:06.417588" elapsed="0.795946"/>
 </kw>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.001691"/>
+<status status="PASS" start="2025-01-19T18:32:03.743340" elapsed="3.470194"/>
 </branch>
 <branch type="ELSE">
 <kw name="Go Back" owner="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="NOT RUN" start="2025-01-19T14:27:09.423175" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-19T18:32:07.213534" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-01-19T14:27:09.423175" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-19T18:32:07.213534" elapsed="0.000000"/>
 </branch>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.001691"/>
+<status status="PASS" start="2025-01-19T18:32:03.743340" elapsed="3.470194"/>
 </if>
-<status status="NOT RUN" start="2025-01-19T14:27:09.421484" elapsed="0.001691"/>
+<status status="PASS" start="2025-01-19T18:32:00.895005" elapsed="6.318529"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-19T14:27:09.423175" level="INFO">Produkt není Skladem</msg>
 <arg>Produkt není Skladem</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-19T14:27:09.423175" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-01-19T18:32:07.213534" elapsed="0.000000"/>
 </kw>
 <kw name="Go Back" owner="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2025-01-19T14:27:09.423175" elapsed="0.023471"/>
+<status status="NOT RUN" start="2025-01-19T18:32:07.214541" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-01-19T14:27:09.423175" elapsed="0.023471"/>
+<status status="NOT RUN" start="2025-01-19T18:32:07.213534" elapsed="0.001007"/>
 </branch>
-<status status="PASS" start="2025-01-19T14:27:09.421484" elapsed="0.025162"/>
+<status status="PASS" start="2025-01-19T18:32:00.895005" elapsed="6.319536"/>
 </if>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:27:09.446646" level="INFO">Clicking element 'xpath=//a[@data-testid='headerBasketIcon']'.</msg>
+<msg time="2025-01-19T18:32:07.214541" level="INFO">Clicking element 'xpath=//a[@data-testid='headerBasketIcon']'.</msg>
 <arg>${Show_basket}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:27:09.446646" elapsed="0.776587"/>
+<status status="PASS" start="2025-01-19T18:32:07.214541" elapsed="0.929113"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Jsem tak prázdný...</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-19T14:27:10.223233" elapsed="0.036848"/>
+<status status="PASS" start="2025-01-19T18:32:08.143654" elapsed="0.034622"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-19T14:27:10.260081" level="INFO">Košík je prázdný</msg>
+<msg time="2025-01-19T18:32:08.179275" level="INFO">Košík je prázdný</msg>
 <arg>Košík je prázdný</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-19T14:27:10.260081" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-19T18:32:08.179275" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T18:32:08.179275" level="INFO">Clicking element 'xpath=//a[@data-testid='headerLogo']'.</msg>
+<arg>${Homepage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-19T18:32:08.179275" elapsed="0.598424"/>
 </kw>
 <kw name="Closing a browser" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-19T14:27:10.261594" elapsed="2.219834"/>
+<status status="PASS" start="2025-01-19T18:32:08.778700" elapsed="2.618698"/>
 </kw>
-<status status="PASS" start="2025-01-19T14:27:10.261594" elapsed="2.219834"/>
+<status status="PASS" start="2025-01-19T18:32:08.778700" elapsed="2.618698"/>
 </kw>
-<status status="PASS" start="2025-01-19T14:27:00.195049" elapsed="12.286379"/>
+<status status="PASS" start="2025-01-19T18:31:51.026644" elapsed="20.370754"/>
 </test>
-<status status="PASS" start="2025-01-19T14:26:59.963805" elapsed="12.519163"/>
+<status status="PASS" start="2025-01-19T18:31:50.858855" elapsed="20.540529"/>
 </suite>
-<status status="PASS" start="2025-01-19T14:26:59.941008" elapsed="12.542979"/>
+<status status="PASS" start="2025-01-19T18:31:50.838834" elapsed="20.561549"/>
 </suite>
 <statistics>
 <total>
@@ -282,7 +298,7 @@
 </tag>
 <suite>
 <stat name="PythonProject" id="s1" pass="1" fail="0" skip="0">PythonProject</stat>
-<stat name="Alza - vyhledání produktu" id="s1-s1" pass="1" fail="0" skip="0">PythonProject.Alza - vyhledání produktu</stat>
+<stat name="Alza vyhledání produktu" id="s1-s1" pass="1" fail="0" skip="0">PythonProject.Alza vyhledání produktu</stat>
 </suite>
 </statistics>
 <errors>

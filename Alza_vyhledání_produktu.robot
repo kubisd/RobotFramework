@@ -18,10 +18,13 @@ Setting up a browser
 Closing a browser
     Close Browser
 
+
+
 *** Test Cases ***
 Nákup produktu
     [Setup]    Setting Up A Browser
     [Teardown]    Closing A Browser
+    [Documentation]
     Click Element    css:[data-action-type-value="13"]
     Input Text    css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]    ${Product}
     Press Keys    css:input[placeholder="Co hledáte? Např. kabel AlzaPower..."]    ENTER
@@ -70,6 +73,7 @@ Nákup produktu
    Click Element    ${Show_basket}
    Wait Until Page Contains    Jsem tak prázdný...
    Log    Košík je prázdný
+   Click Element    ${Homepage}
 
 
 
