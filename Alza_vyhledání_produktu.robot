@@ -54,7 +54,6 @@ Nákup produktu
         ${IS_PRESENT3}=    Run Keyword And Return Status    Current Frame Should Contain    Herní konzole Valve Steam Deck OLED Console 512GB
         IF     '$IS_PRESENT3='
             Click Element    ${Show_basket}
-            Sleep    1s
             Click Element    xpath=//div[@class="countMinus"]
             Sleep    1s
             Click Element    xpath=//span[@class="btnx normal green ok" and text()="Odebrat zboží"]
